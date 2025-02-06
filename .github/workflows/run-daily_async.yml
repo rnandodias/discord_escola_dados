@@ -2,7 +2,7 @@ name: Run Discord Bot
 
 on:
   schedule:
-    - cron: '20 9 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
+    - cron: '55 9 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
 
   workflow_dispatch:  # Permite rodar manualmente pelo GitHub Actions
 
@@ -24,3 +24,5 @@ jobs:
 
       - name: Executar o Bot
         run: python daily_async.py
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}

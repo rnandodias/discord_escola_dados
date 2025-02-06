@@ -10,6 +10,9 @@ if sys.platform == "win32":
 
 # Configurações do Bot
 TOKEN = os.getenv("DISCORD_TOKEN")
+if TOKEN is None:
+    raise ValueError("❌ ERRO: O token do Discord não foi carregado. Verifique o GitHub Secrets.")
+
 GUILD_ID = 1176999745043042355  # ID do servidor Discord
 CHANNEL_ID = 1176999745043042358  # ID do canal onde a thread será criada
 
