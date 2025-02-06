@@ -2,7 +2,7 @@ name: Run Discord Bot
 
 on:
   schedule:
-    - cron: '6 18 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
+    - cron: '20 9 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
 
   workflow_dispatch:  # Permite rodar manualmente pelo GitHub Actions
 
