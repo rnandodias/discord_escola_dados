@@ -1,0 +1,26 @@
+name: Run Discord Bot
+
+on:
+  schedule:
+    - cron: '6 10 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
+
+  workflow_dispatch:  # Permite rodar manualmente pelo GitHub Actions
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências
+        run: pip install discord.py
+
+      - name: Executar o Bot
+        run: python daily_async.py
