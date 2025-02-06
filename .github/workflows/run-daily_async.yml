@@ -2,12 +2,12 @@ name: Run Discord Bot
 
 on:
   schedule:
-    - cron: '18 10 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
+    - cron: '20 10 * * *'  # Segunda e quinta-feira às 10h UTC (7h no Brasil)
 
   workflow_dispatch:  # Permite rodar manualmente pelo GitHub Actions
 
 jobs:
-  cron:
+  cron-schedule:
     runs-on: ubuntu-latest
 
     steps:
