@@ -14,10 +14,10 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v3
 
-      - name: Configurar Python
+      - name: Configurar Python 3.11
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Instalar dependências
         run: pip install discord.py
