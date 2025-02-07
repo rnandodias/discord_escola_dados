@@ -2,13 +2,15 @@ import discord
 import asyncio
 from datetime import datetime
 import os
-
-# Configura o loop de eventos correto no Windows
 import sys
+from dotenv import load_dotenv
+
+# Configura o loop de eventos correto no Windows (somente necessário para rodar os tesstes locais)
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # Configurações do Bot
+load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 if TOKEN is None:
     raise ValueError("❌ ERRO: O token do Discord não foi carregado. Verifique o GitHub Secrets.")

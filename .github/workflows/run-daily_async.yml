@@ -2,8 +2,7 @@ name: Run Discord Bot
 
 on:
   schedule:
-    - cron: '00 11 * * *'
-
+    - cron: '00 11 * * 2,4,5'
   workflow_dispatch:
 
 jobs:
@@ -20,9 +19,9 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependências
-        run: pip install discord.py
+        run: pip install -r requirements.txt
 
       - name: Executar o Bot
-        run: python daily_async.py
+        run: python daily_async_checkpoint.py
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
