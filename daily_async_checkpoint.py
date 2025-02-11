@@ -76,7 +76,7 @@ async def on_ready():
     thread_name = f"Daily - {datetime.now(UTC).strftime('%d/%m')}"
     message = await channel.send(f"Bom dia, <@&{ROLE_ID}>!\n\n**Hoje é dia de daily assíncrona!**\nSegue a thread da daily de hoje. **Por favor preencham até 10:30**. 😁💚\n\nBom trabalho para todos!✨")
     thread = await message.create_thread(name=thread_name)
-    await thread.send("✅ Comente aqui suas atualizações.")
+    await thread.send("✅ Comente aqui suas atualizações.\n**Não esqueçam de atualizar os cards no ClickUp e de atualizar seus calendários.**")
 
     print(f"✅ Thread '{thread_name}' criada com sucesso!")
 
