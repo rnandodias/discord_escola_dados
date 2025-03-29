@@ -25,8 +25,8 @@ CHANNEL_ID = 1336416604900298823  # ID do canal onde a thread será criada (prod
 ROLE_ID = 809389784635277342    # ID do cargo (produção)
 
 # Definir a data inicial para sextas alternadas (ajuste conforme necessário)
-# START_DATE = datetime(2025, 2, 14, tzinfo=UTC)  # Primeira sexta desejada com timezone UTC
-START_DATE = datetime(2025, 3, 21, tzinfo=UTC)  # Primeira sexta desejada com timezone UTC
+START_DATE = datetime(2025, 2, 14, tzinfo=UTC)  # Primeira sexta desejada com timezone UTC
+# START_DATE = datetime(2025, 3, 21, tzinfo=UTC)  # Primeira sexta desejada com timezone UTC
 
 def should_run_today():
     today = datetime.now(UTC)
